@@ -1,0 +1,96 @@
+.about-wrap{
+    width: 100vw;
+    background: $dark-pink !important;
+    position: relative;
+    
+    h1{
+        max-width: 2560px;
+        margin: 0 auto;
+        display: inline-block;
+        font-size: 40px;
+        padding: 20px 0 20px 0;
+        color: $pink-light;
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        justify-content: center;
+        transition: .3s ease-in-out;
+
+        @media (max-width: $screen-sm-down){
+        font-size: 26px;
+        padding: 12px 0 12px 0;
+        transition: .3s ease-in-out;
+        }
+    }
+
+    .hr-line{
+        position: absolute;
+        top: 50%;
+        right: -70px;
+        border-top: 2px solid $pink-light;
+        width: 50%;
+
+        @media (max-width: $screen-sm-down){
+            right: -45px; 
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+.page {
+
+    &-bg {
+        position: relative;
+        overflow: hidden;
+        padding: 30px;
+
+        img {
+            width: 100%;
+            z-index: -1; 
+            position: relative;
+            object-fit: cover;
+            height: 70vh;
+            @include bord-radius;
+        }
+
+        &_text {
+            font-size: 2.4rem;
+            font-family: 'Lato', sans-serif;
+            color: $white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            text-align: center;
+
+            @media (max-width: $screen-md-down) {
+                font-size: 30px;
+                font-weight: normal;
+            }
+
+            @media (max-width: $screen-sm-down) {
+                font-size: 20px;
+                min-width: 240px;
+            }
+        }
+
+        .arrow {
+
+            i {
+                font-size: 55px;
+                color: $green;
+                text-align: center;
+                display: block;
+                margin-top: 40px;
+                opacity: 1;
+                transform: translateY(-20px);
+                transition: .5s linear;
+                animation: arrow 1s linear infinite alternate;
+
+                @media (max-width: $screen-sm-down) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+.contacts {
+    overflow-x: hidden;
+
+    &-wrap {
+        width: 100vw;
+        background: $dark-pink !important;
+        position: relative;
+        max-width: 1920px;
+
+        h1 {
+            max-width: 1920px;
+            display: inline-block;
+            font-size: 40px;
+            padding: 20px 0 20px 0;
+            color: $pink-light;
+            // font-family: "PT Serif", serif !important;
+            font-family: 'Lato', sans-serif;
+            display: flex;
+            justify-content: center;
+            transition: .3s ease-in-out;
+
+            @media (max-width: $screen-sm-down) {
+                font-size: 26px;
+                padding: 12px 0 12px 0;
+                transition: .3s ease-in-out;
+            }
+        }
+
+        .hr-line {
+            position: absolute;
+            top: 50%;
+            right: -80px;
+            border-top: 2px solid $pink-light;
+            width: 50%;
+
+            @media (max-width: $screen-sm-down) {
+                right: -55px;
+                transition: .3s ease-in-out;
+            }
+        }
+    }
+
+    .wpcf7-form {
+        border: 1px solid #ebcabb;
+        padding: 30px;
+        margin: 10px;
+        border-radius: 20px;
+
+        .contacts-form-wrapper {
+
+            p {
+                position: relative;
+
+                .label-info {
+                    position: absolute;
+                    left: 7px;
+                    width: 100%;
+                    top: 20px;
+                    color: $dark-pink;
+                    opacity: .9;
+                    transition: 0.3s;
+                    letter-spacing: 0.5px;
+                    font-size: 14px;
+                    z-index: -1;
+                    height: 0;
+                }
+
+                span>input {
+                    margin-top: 10px;
+                }
+
+                span>textarea {
+                    margin-top: 20px;
+                }
+
+                .has-content {
+                    position: absolute;
+                    left: 0px; 
+                    top: 3px;
+                    font-size: 10px;
+                    color: $green;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+    .wpcf7 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .wpcf7-submit {
+        cursor: pointer;
+        font-size: 18px;
+        color: $white;
+        background: $dark-pink;
+        padding: 8px 25px;
+        border: 1px $dark-pink solid;
+        transition: .3s ease-in-out;
+        margin-top: 10px;
+        width: 100%;
+        border-radius: 10px;
+
+        &:hover {
+            color: $white;
+            background: $green;
+            transition: .3s ease-in-out;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border: none;
+        background: $white-pink;
+        border-bottom: 1px solid $dark-pink;
+        color: $green;
+        font-size: 16px;
+        width: 400px;
+        max-width: 100%;
+        margin-bottom: 10px;
+        transition: .3s ease-in-out;
+        background-color: transparent;
+
+        &:focus {
+            outline: none !important;
+            border-bottom: 1px solid $green;
+            transition: .2s ease-in-out;
+        }
+
+        @media (max-width: 450px) {
+            width: 280px;
+            max-width: 280px;
+            transition: .3s ease-in-out;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+.contacts>h2 {
+    color: $green !important;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contacts>p {
+    font-size: 14px;
+    color: #1C5860;
+    line-height: 1.6;
+    background-color: #FFFAF8;
+    padding: 20px 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
+        width: 250px;
+        transition: .3s ease-in-out;
+    }
+}

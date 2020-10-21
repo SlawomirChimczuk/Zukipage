@@ -1,0 +1,128 @@
+.studio-about{
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    .studio-title{
+        margin-bottom: 50px;
+    } 
+ 
+    h2{
+        color: $green!important;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    p{
+        font-size: 14px;
+        color: #1C5860;
+        line-height: 1.6;
+        background-color: $white-pink;
+        padding: 20px 30px;
+        max-width: 700px;
+        margin: 0 auto;
+    } 
+
+    img {
+        border-radius: 20px;
+    }
+
+    .wp-block-image{
+        max-width: 900px;
+        margin: 0 auto;
+        
+        img{
+            margin: 50px 0;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                top: 0;
+                right: -10px;
+            }
+        }
+    }
+
+    &-bottom{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 200px;
+        
+        @media (max-width: $screen-md-down) {
+            margin-top: 0px;
+        }
+
+
+        .bottom-bg{
+            background-color: $dark-pink;
+            width: 80%;
+            position: absolute;
+            right: 0;
+            top: -110px;
+            z-index: -1;
+
+            @media (max-width: $screen-md-down) {
+                display: none;
+            }
+        }
+
+        .bottom_left{
+
+            @media (min-width: $screen-lg-middle-up) {
+                width: 35%;
+
+                img{
+                    max-width: 450px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    margin-top: -40px;
+                }
+            }
+
+            @media (max-width: $screen-lg-middle) {
+                display: none;
+                transition: .3s ease-in-out;
+            }
+        }
+
+        .bottom_right{
+
+            @media (min-width: $screen-lg-middle-up) {
+                width: 65%;
+            }
+                img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    margin-top: 60px;
+                    
+                    @media (min-width: $screen-lg-middle-up) {
+                        max-width: 630px;
+                    }
+                } 
+            
+
+            @media (max-width: $screen-lg-middle) {
+                max-width: 543px;
+                margin: 0 auto;
+
+                img{
+                    margin: 50px 0;
+                    max-width: 100%;
+                    height: auto;
+                    position: relative;
+                }
+            }
+        }
+    }
+}

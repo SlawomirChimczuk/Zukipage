@@ -1,0 +1,102 @@
+.portfolio {
+    overflow: hidden;
+
+    .about-wrap .hr-line {
+        right: -90px;
+    }
+}
+
+.catalog {
+    overflow: hidden;
+
+    .about-wrap .hr-line {
+        right: -160px;
+    }
+}
+
+.portfolio,
+.catalog {
+
+    section {
+        max-width: 1400px;
+        margin: 0 auto;
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .gallery {
+            flex-basis: calc((100% / 3) - 30px);
+            margin: 10px;
+            border-radius: 20px;
+            transition: .3s;
+
+            @media (max-width: $screen-md-down) {
+                flex-basis: calc((100% / 2) - 20px);
+                transition: .3s;
+            }
+
+            @media (max-width: $screen-sm-down) {
+                flex-basis: calc((100% / 1) - 20px);
+                transition: .3s;
+            }
+
+            &:hover {
+                -webkit-box-shadow: 0px 0px 25px -12px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 0px 25px -12px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 0px 25px -12px rgba(0, 0, 0, 0.75);
+                border-radius: 30px;
+                transition: .3s;
+                transform: scale(1.03);
+            }
+
+            &:hover .gallery_wrapper .gallery-link .gallery-item-secondary {
+                opacity: 1;
+                transition: .5s linear;
+                transform: scale(1);
+            }
+
+            .gallery_wrapper {
+                margin: 15px;
+                overflow: hidden;
+                border-radius: 20px;
+
+                .gallery-link {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .gallery-item-main {
+                        position: relative;
+                        cursor: pointer;
+                    }
+
+                    .gallery-item-secondary {
+                        position: absolute;
+                        left: 0;
+                        opacity: 0;
+                        transition: .5s linear;
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+
+            .gallery-info {
+                text-align: center;
+                margin: 15px;
+                color: $green;
+
+                .name {
+                    font-size: 30px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
